@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.example</groupId>
+    <artifactId>spring-cloud-learning</artifactId>
+    <version>0.0.1</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>eureka</module>
+        <module>eureka-cluster</module>
+        <module>service</module>
+        <module>consumer</module>
+        <module>feign-consumer</module>
+        <module>circuit-breaker-consumer</module>
+        <module>git-config</module>
+        <module>service-config</module>
+        <module>gateway-zuul</module>
+        <module>rabbitmq</module>
+        <module>bus-rabbitmq-config</module>
+        <module>zipkin-jdbc-consumer</module>
+        <module>zipkin-jdbc-server</module>
+        <module>zipkin-sleuth-consumer</module>
+        <module>zipkin-sleuth-server</module>
+        <module>zipkin-sleuth-stream-consumer</module>
+        <module>zipkin-span-data-message-consumer</module>
+        <module>zipkin-sleuth-stream-server</module>
+        <module>hystrix-dashboard</module>
+        <module>hystrix-turbine</module>
+        <module>hystrix-turbine-amqp</module>
+        <module>hystrix-turbine-amqp-producer</module>
+    </modules>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.5.9.RELEASE</version>
+    </parent>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Edgware.RELEASE</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+</project>

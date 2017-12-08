@@ -1,0 +1,23 @@
+management:
+  port: 8990
+
+spring:
+  application:
+    name: turbine-amqp-application
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: springboot
+    password: springboot
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+
+turbine:
+  app-config: hystrix-turbine-amqp-producer-application
+  cluster-name-expression: "default"
+  combine-host-port: true
+  stream:
+    port: 8989

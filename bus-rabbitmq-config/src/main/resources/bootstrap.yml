@@ -1,0 +1,23 @@
+server:
+  port: 7006
+
+spring:
+  application:
+    name: bus-rabbitmq-config-application
+  cloud:
+    config:
+      label: master
+      profile: dev
+      discovery:
+        enabled: true
+        serviceId: git-config-server
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: springboot
+    password: springboot
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/

@@ -2,7 +2,7 @@
 
 运行当前项目下的`git.sh`脚本，生成git仓库，并切出了一个工作空间config目录，并将目录地址更新到`application.properties`上：
 
-> spring.cloud.config.server.git.uri=/home/yuweijun/github.com/learning-programming/spring-cloud/git-config/config
+> spring.cloud.config.server.git.uri=/github.com/learning-programming/spring-cloud/git-config/config
 
 ## url
 

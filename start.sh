@@ -43,4 +43,18 @@ sleep 10
 echo "service-config server start"
 mvn spring-boot:run -f service-config -Drun.jvmArguments="-Dserver.port=7002" > logs/service-config.7002.log &
 
+sleep 10
+echo "hystrix-dashboard server start"
+mvn spring-boot:run -f hystrix-dashboard -Drun.jvmArguments="-Dserver.port=7788" > logs/hystrix-dashboard.7788.log &
+
+sleep 10
+echo "hystrix-turbine server start"
+mvn spring-boot:run -f hystrix-turbine -Drun.jvmArguments="-Dserver.port=7799" > logs/hystrix-turbine.7799.log &
+
 echo "finished....."
+
+echo "firefox http://localhost:7788/hystrix"
+echo "input http://localhost:8098/hystrix.stream"
+echo "curl http://localhost:8098/rand"
+echo "http://localhost:7788/hystrix/monitor?stream=http%3A%2F%2Flocalhost%3A8098%2Fhystrix.stream"
+echo "http://localhost:7788/hystrix/monitor?stream=http%3A%2F%2Flocalhost%3A7799%2Fturbine.stream"
